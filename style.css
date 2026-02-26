@@ -1,0 +1,587 @@
+/* =========================================================================
+   STYLE.CSS - Web 2.0 / 2006-2008 Tech Aesthetic (Steam / Apple Leopard vibe)
+   ========================================================================= */
+
+body {
+    background: #1a1a1a url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACAQMAAABIeJ9nAAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMAG/xyrK8AAAALSURBVAjXY3BgAAABDgAEY8n/gAAAAABJRU5ErkJggg==') repeat;
+    /* Subtle dark scanline/pattern */
+    color: #cccccc;
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Trebuchet MS", "Lucida Grande", Tahoma, Arial, sans-serif;
+    margin: 0 0 10px 0;
+    color: #e6e6e6;
+    text-shadow: 1px 1px 0 #000;
+}
+
+a {
+    color: #00bfff;
+    /* Cyan/blue link color for tech feel */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+/* ----------------------------------------------------
+   LAYOUT WRAPPER (Classic 960px fixed center)
+   ---------------------------------------------------- */
+#wrapper {
+    width: 960px;
+    margin: 20px auto;
+    background-color: #232323;
+    border: 1px solid #000;
+    border-top: 1px solid #3a3a3a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* ----------------------------------------------------
+   FOOTER
+   ---------------------------------------------------- */
+#footer {
+    background: #111;
+    border-top: 1px solid #000;
+    padding: 20px 40px;
+    /* Added horizontal padding to the whole footer wrapper */
+    color: #777;
+    font-size: 11px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.footer-box {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.footer-box h4 {
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+.footer-box ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-box ul li {
+    margin-bottom: 4px;
+}
+
+.footer-box.text-right {
+    text-align: right;
+    padding-top: 25px;
+}
+
+/* ----------------------------------------------------
+   HEADER & NAVIGATION
+   ---------------------------------------------------- */
+#header {
+    background: #333;
+    background: linear-gradient(to bottom, #4a4a4a 0%, #2f2f2f 50%, #222222 51%, #111111 100%);
+    border-bottom: 1px solid #000;
+    height: 80px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#logo-area {
+    float: left;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+
+#logo-img {
+    height: 45px;
+    margin-right: 15px;
+    filter: drop-shadow(1px 2px 3px #000);
+}
+
+/* CSS Custom Logo Structure */
+.css-logo-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* keep them centered */
+    height: 24px;
+    /* match exactly the cap-height of the 32px font text */
+    width: 40px;
+    /* Made the rectangles wider horizontally */
+    margin-right: 8px;
+}
+
+.logo-rect {
+    width: 100%;
+    height: 8px;
+    /* 3 rects * 8px = 24px total height exactly matching the container and text cap height */
+    /* Removed border radius so they sit completely flat against each other */
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* subtle Web 2.0 depth */
+}
+
+.rect-blue {
+    background-color: #0097b2;
+}
+
+.rect-white {
+    background-color: #ffffff;
+}
+
+#site-title {
+    font-family: 'League Spartan', sans-serif;
+    /* Applied new custom font */
+    font-size: 32px;
+    /* Slightly larger to look robust matching the bold rectangles */
+    margin: 0;
+    margin-top: 3px;
+    /* Slightly lowers the text to visually align the center with the CSS rectangles */
+    color: #e5e8ca;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-shadow: 1px 1px 2px #000;
+    /* Removed neon glow, kept classic dark shadow */
+    line-height: 1;
+}
+
+#nav {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+#nav li {
+    float: left;
+    margin-left: 5px;
+}
+
+#nav a {
+    display: block;
+    padding: 6px 15px;
+    color: #b0b0b0;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px 0 #000;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+#nav a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #111;
+    text-decoration: none;
+}
+
+#nav a.active {
+    color: #fff;
+    background: #222;
+    border: 1px solid #111;
+    border-top: 1px solid #0c0c0c;
+    border-bottom: 1px solid #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------------------------------------------
+   SPOTLIGHT (HERO SECTION)
+   ---------------------------------------------------- */
+#spotlight {
+    position: relative;
+    background: #111;
+    background: radial-gradient(circle at center, #262c31 0%, #111111 100%);
+    border-bottom: 1px solid #000;
+    padding: 30px;
+    display: flex;
+    border-top: 1px solid #444;
+    /* Highlights below header */
+}
+
+.spotlight-content {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.spotlight-content h2 {
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+}
+
+.spotlight-content p {
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.spotlight-image {
+    width: 320px;
+    height: 180px;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+/* Classic diagonal reflection effect */
+.glass-reflection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+}
+
+/* Glossy Button */
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff !important;
+    /* Force white text */
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid #053b50;
+    border-bottom-color: #021a24;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.glossy-btn {
+    /* Blue/cyan glossy gradient a-la classic Apple/Web 2.0 */
+    background: #007bb5;
+    background: linear-gradient(to bottom, #00bfff 0%, #0088cc 49%, #006699 50%, #00507a 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.glossy-btn:hover {
+    background: #009ce0;
+    background: linear-gradient(to bottom, #33ccff 0%, #009ce0 49%, #007bb5 50%, #006494 100%);
+    text-decoration: none;
+}
+
+.glossy-btn:active {
+    background: #006699;
+    background: linear-gradient(to bottom, #004d73 0%, #005a87 100%);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6);
+    border-top-color: #000;
+}
+
+/* ----------------------------------------------------
+   MAIN CONTENT & PANELS
+   ---------------------------------------------------- */
+#main-content {
+    padding: 20px;
+    background: #232323;
+}
+
+.panel {
+    background: #2a2a2a;
+    border: 1px solid #111;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), inset 0 1px 0 #3a3a3a;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.panel-header {
+    background: linear-gradient(to bottom, #444 0%, #333 100%);
+    padding: 10px 15px;
+    border-bottom: 1px solid #111;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.panel-content {
+    padding: 20px;
+    background: #2b2b2b;
+}
+
+/* Services List */
+.services-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.services-list li {
+    background: #333;
+    border: 1px solid #222;
+    border-top: 1px solid #4a4a4a;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.services-list li:hover {
+    background: #383838;
+}
+
+.service-icon {
+    font-size: 32px;
+    width: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    background: #222;
+    border-radius: 4px;
+    border: 1px solid #111;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5), 0 1px 0 #444;
+}
+
+.service-text h4 {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.service-text p {
+    margin: 0;
+    color: #bbb;
+    font-size: 12px;
+}
+
+/* Data Table for Pricing */
+.prices-disclaimer {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 15px;
+    background: #222;
+    padding: 10px;
+    border: 1px solid #1a1a1a;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #222;
+    border: 1px solid #111;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.data-table th {
+    background: linear-gradient(to bottom, #3a3a3a 0%, #2a2a2a 100%);
+    color: #ddd;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #111;
+    border-right: 1px solid #222;
+}
+
+.data-table td {
+    font-size: 13px;
+    color: #ccc;
+    border-right: 1px solid #1a1a1a;
+}
+
+.data-table tr.row-alt {
+    background: #262626;
+}
+
+.data-table tr:hover td {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.col-price {
+    font-weight: bold;
+    color: #00d2ff !important;
+    text-align: right !important;
+    width: 250px;
+}
+
+/* ----------------------------------------------------
+   SOCIAL LINKS & EXTRAS
+   ---------------------------------------------------- */
+.spotlight-social {
+    margin-top: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    color: #e6e6e6;
+    font-size: 13px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.social-link img {
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.social-link:hover {
+    opacity: 1;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-color: #555;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE DESIGN (Media Queries for Web 2.0 theme)
+   ---------------------------------------------------- */
+
+/* Make the fixed wrapper flexible */
+#wrapper {
+    width: 960px;
+    max-width: 95%;
+    /* Adjust for smaller screens */
+    margin: 20px auto;
+    background-color: #232323;
+    border: 1px solid #000;
+    border-top: 1px solid #3a3a3a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* For data table responsiveness */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 4px;
+    border: 1px solid #111;
+}
+
+/* Base structural adjustments for tablets and below */
+@media screen and (max-width: 800px) {
+    #spotlight {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .spotlight-content {
+        padding-right: 0;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .spotlight-image {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .footer-box {
+        width: 100%;
+        float: none;
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+
+    .footer-box.text-right {
+        padding-top: 0;
+        border-top: 1px solid #222;
+        padding-top: 15px;
+    }
+}
+
+/* Adjustments for mobile phones */
+@media screen and (max-width: 600px) {
+    #header {
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    #logo-area {
+        float: none;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    #nav {
+        float: none;
+        margin-top: 10px;
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nav li {
+        margin: 5px;
+    }
+
+    .services-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 60px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    .col-price {
+        width: auto;
+    }
+}

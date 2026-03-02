@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -28,7 +29,6 @@
             <ul id="nav">
                 <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#precios">Precios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -38,7 +38,8 @@
                 <h2>Soluciones Tecnológicas a Tu Alcance</h2>
                 <p>Reparamos tu dispositivo y le devolvemos la vida. Especialistas en reparación de televisores,
                     celulares, computadoras, instalación de software y mantenimiento completo.</p>
-                <a href="#contacto" class="btn glossy-btn">Consultar Presupuesto &raquo;</a>
+                <a href="https://wa.me/5493624868450?text=Hola%20tengo%20una%20consulta"
+                    class="btn glossy-btn">Consultar Presupuesto &raquo;</a>
                 <div class="spotlight-social">
                     <a href="https://www.instagram.com/mimaquinaa/" target="_blank" class="social-link"
                         title="Síguenos en Instagram">
@@ -49,8 +50,23 @@
                 </div>
             </div>
             <div class="spotlight-image">
+                <div class="carousel" id="spotlight-carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-slide active"><img src="destacado-1.png" alt="Destacado 1"></div>
+                        <div class="carousel-slide"><img src="destacado-2.png" alt="Destacado 2"></div>
+                        <div class="carousel-slide"><img src="destacado-3.png" alt="Destacado 3"></div>
+                        <div class="carousel-slide"><img src="destacado-4.png" alt="Destacado 4"></div>
+                    </div>
+                    <button class="carousel-arrow carousel-prev" aria-label="Anterior">&#10094;</button>
+                    <button class="carousel-arrow carousel-next" aria-label="Siguiente">&#10095;</button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
                 <div class="glass-reflection"></div>
-                <span>[ Área de Destacados ]</span>
             </div>
         </div>
 
@@ -61,98 +77,252 @@
                 </div>
                 <div class="panel-content">
                     <ul class="services-list">
-                        <li>
-                            <div class="service-icon">📺</div>
-                            <div class="service-text">
-                                <h4>Reparación de Televisores</h4>
-                                <p>Soluciones a problemas de encendido, imagen, sonido e iluminación LED de tu Smart TV.
-                                </p>
+                        <li class="service-item" data-service="tv">
+                            <div class="service-header">
+                                <div class="service-icon">📺</div>
+                                <div class="service-text">
+                                    <h4>Reparación de Televisores</h4>
+                                </div>
+                                <span class="service-toggle">▼</span>
+                            </div>
+                            <div class="service-detail">
+                                <div class="detail-content">
+                                    <div class="detail-text">
+                                        <p>Reparamos todo tipo de televisores: LED, LCD, OLED y Smart TV. Nuestro
+                                            servicio incluye diagnóstico completo, reemplazo de placas fuente, placas
+                                            T-CON, retroiluminación LED, reparación de paneles y actualización de
+                                            firmware. Trabajamos con todas las marcas: Samsung, LG, Sony, Philips, TCL y
+                                            más.</p>
+                                        <div class="detail-prices">
+                                            <h5>Precios Estimados</h5>
+                                            <ul class="price-list">
+                                                <li><span class="price-label">Diagnóstico de TV</span><span
+                                                        class="price-value">Consultar</span></li>
+                                                <li><span class="price-label">Revisión de Pantalla</span><span
+                                                        class="price-value">Consultar</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="detail-carousel">
+                                        <div class="carousel mini-carousel">
+                                            <div class="carousel-track">
+                                                <div class="carousel-slide active"><img src="servicio-tv-1.png"
+                                                        alt="Reparación TV 1"></div>
+                                                <div class="carousel-slide"><img src="servicio-tv-2.png"
+                                                        alt="Reparación TV 2"></div>
+                                                <div class="carousel-slide"><img src="servicio-tv-3.png"
+                                                        alt="Reparación TV 3"></div>
+                                            </div>
+                                            <button class="carousel-arrow carousel-prev"
+                                                aria-label="Anterior">&#10094;</button>
+                                            <button class="carousel-arrow carousel-next"
+                                                aria-label="Siguiente">&#10095;</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="service-icon">📱</div>
-                            <div class="service-text">
-                                <h4>Telefonía Celular</h4>
-                                <p>Cambios de pantallas LCD/OLED, reemplazo de baterías y reparación de pines de carga
-                                    (microsoldadura).</p>
+                        <li class="service-item" data-service="celular">
+                            <div class="service-header">
+                                <div class="service-icon">📱</div>
+                                <div class="service-text">
+                                    <h4>Telefonía Celular</h4>
+                                </div>
+                                <span class="service-toggle">▼</span>
+                            </div>
+                            <div class="service-detail">
+                                <div class="detail-content">
+                                    <div class="detail-text">
+                                        <p>Especialistas en reparación de celulares de todas las marcas. Realizamos
+                                            cambio de pantalla (LCD y OLED), reemplazo de batería, reparación de pin de
+                                            carga mediante microsoldadura, cambio de flex de carga, solución de
+                                            problemas de software, y recuperación de equipos mojados. Trabajamos con
+                                            Motorola, Samsung, Xiaomi, iPhone y más.</p>
+                                        <div class="detail-prices">
+                                            <h5>Precios Estimados</h5>
+                                            <ul class="price-list">
+                                                <li><span class="price-label">Cambio de Módulo de Carga</span><span
+                                                        class="price-value">Desde $10.000</span></li>
+                                                <li><span class="price-label">Cambio de Pantalla</span><span
+                                                        class="price-value">Consultar</span></li>
+                                                <li><span class="price-label">Reemplazo de Batería</span><span
+                                                        class="price-value">Consultar</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="detail-carousel">
+                                        <div class="carousel mini-carousel">
+                                            <div class="carousel-track">
+                                                <div class="carousel-slide active"><img src="servicio-cel-1.png"
+                                                        alt="Telefonía 1"></div>
+                                                <div class="carousel-slide"><img src="servicio-cel-2.png"
+                                                        alt="Telefonía 2"></div>
+                                                <div class="carousel-slide"><img src="servicio-cel-3.png"
+                                                        alt="Telefonía 3"></div>
+                                            </div>
+                                            <button class="carousel-arrow carousel-prev"
+                                                aria-label="Anterior">&#10094;</button>
+                                            <button class="carousel-arrow carousel-next"
+                                                aria-label="Siguiente">&#10095;</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="service-icon">💻</div>
-                            <div class="service-text">
-                                <h4>Computadoras y Notebooks</h4>
-                                <p>Diagnóstico avanzado, reparación de motherboards, ampliación de discos de estado
-                                    sólido (SSD) y memoria RAM.</p>
+                        <li class="service-item" data-service="pc">
+                            <div class="service-header">
+                                <div class="service-icon">💻</div>
+                                <div class="service-text">
+                                    <h4>Computadoras y Notebooks</h4>
+                                </div>
+                                <span class="service-toggle">▼</span>
+                            </div>
+                            <div class="service-detail">
+                                <div class="detail-content">
+                                    <div class="detail-text">
+                                        <p>Servicio integral para computadoras de escritorio y notebooks. Incluye
+                                            diagnóstico avanzado de hardware, reparación y reballing de motherboards,
+                                            ampliación de memoria RAM, upgrade a disco SSD, cambio de teclado y pantalla
+                                            en notebooks, reparación de bisagras y resolución de problemas de encendido.
+                                            Armamos equipos a medida según tu presupuesto.</p>
+                                        <div class="detail-prices">
+                                            <h5>Precios Estimados</h5>
+                                            <ul class="price-list">
+                                                <li><span class="price-label">Diagnóstico de Equipo</span><span
+                                                        class="price-value">Consultar</span></li>
+                                                <li><span class="price-label">Limpieza + Pasta Térmica</span><span
+                                                        class="price-value">Desde $15.000</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="detail-carousel">
+                                        <div class="carousel mini-carousel">
+                                            <div class="carousel-track">
+                                                <div class="carousel-slide active"><img src="servicio-pc-1.png"
+                                                        alt="PC 1"></div>
+                                                <div class="carousel-slide"><img src="servicio-pc-2.png" alt="PC 2">
+                                                </div>
+                                                <div class="carousel-slide"><img src="servicio-pc-3.png" alt="PC 3">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-arrow carousel-prev"
+                                                aria-label="Anterior">&#10094;</button>
+                                            <button class="carousel-arrow carousel-next"
+                                                aria-label="Siguiente">&#10095;</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="service-icon">💿</div>
-                            <div class="service-text">
-                                <h4>Software y Juegos</h4>
-                                <p>Instalación limpia de Sistemas Operativos (Windows/Linux), Office, utilidades y
-                                    videojuegos con requisitos óptimos.</p>
+                        <li class="service-item" data-service="software">
+                            <div class="service-header">
+                                <div class="service-icon">💿</div>
+                                <div class="service-text">
+                                    <h4>Software y Juegos</h4>
+                                </div>
+                                <span class="service-toggle">▼</span>
+                            </div>
+                            <div class="service-detail">
+                                <div class="detail-content">
+                                    <div class="detail-text">
+                                        <p>Instalación profesional de sistemas operativos Windows 10/11 y distribuciones
+                                            Linux. Configuramos Microsoft Office, programas de diseño, antivirus y
+                                            utilidades esenciales. También instalamos videojuegos optimizados según los
+                                            requisitos de tu equipo, con los drivers y configuraciones necesarias para
+                                            el mejor rendimiento posible.</p>
+                                        <div class="detail-prices">
+                                            <h5>Precios Estimados</h5>
+                                            <ul class="price-list">
+                                                <li><span class="price-label">Instalación de Windows +
+                                                        Drivers</span><span class="price-value">Desde $12.000</span>
+                                                </li>
+                                                <li><span class="price-label">Microsoft Office / Programas</span><span
+                                                        class="price-value">Desde $8.000</span></li>
+                                                <li><span class="price-label">Instalación de Juegos</span><span
+                                                        class="price-value">Desde $5.000</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="detail-carousel">
+                                        <div class="carousel mini-carousel">
+                                            <div class="carousel-track">
+                                                <div class="carousel-slide active"><img src="servicio-soft-1.png"
+                                                        alt="Software 1"></div>
+                                                <div class="carousel-slide"><img src="servicio-soft-2.png"
+                                                        alt="Software 2"></div>
+                                                <div class="carousel-slide"><img src="servicio-soft-3.png"
+                                                        alt="Software 3"></div>
+                                            </div>
+                                            <button class="carousel-arrow carousel-prev"
+                                                aria-label="Anterior">&#10094;</button>
+                                            <button class="carousel-arrow carousel-next"
+                                                aria-label="Siguiente">&#10095;</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="service-icon">⚙️</div>
-                            <div class="service-text">
-                                <h4>Limpieza y Mantenimiento</h4>
-                                <p>Mantenimiento preventivo, remoción de polvo interno, cambio de pasta térmica de alto
-                                    rendimiento para evitar sobrecalentamientos.</p>
+                        <li class="service-item" data-service="limpieza">
+                            <div class="service-header">
+                                <div class="service-icon">⚙️</div>
+                                <div class="service-text">
+                                    <h4>Limpieza y Mantenimiento</h4>
+                                </div>
+                                <span class="service-toggle">▼</span>
+                            </div>
+                            <div class="service-detail">
+                                <div class="detail-content">
+                                    <div class="detail-text">
+                                        <p>Mantenimiento preventivo completo para prolongar la vida útil de tu equipo.
+                                            Realizamos limpieza profunda de ventiladores y disipadores, cambio de pasta
+                                            térmica de alto rendimiento (Arctic, Noctua), reemplazo de pads térmicos,
+                                            limpieza de contactos de memoria RAM y slots de expansión. Ideal para
+                                            equipos con sobrecalentamiento, ruido excesivo o throttling.</p>
+                                        <div class="detail-prices">
+                                            <h5>Precios Estimados</h5>
+                                            <ul class="price-list">
+                                                <li><span class="price-label">Limpieza Completa + Pasta
+                                                        Térmica</span><span class="price-value">Desde $15.000</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="detail-carousel">
+                                        <div class="carousel mini-carousel">
+                                            <div class="carousel-track">
+                                                <div class="carousel-slide active"><img src="servicio-limp-1.png"
+                                                        alt="Limpieza 1"></div>
+                                                <div class="carousel-slide"><img src="servicio-limp-2.png"
+                                                        alt="Limpieza 2"></div>
+                                                <div class="carousel-slide"><img src="servicio-limp-3.png"
+                                                        alt="Limpieza 3"></div>
+                                            </div>
+                                            <button class="carousel-arrow carousel-prev"
+                                                aria-label="Anterior">&#10094;</button>
+                                            <button class="carousel-arrow carousel-next"
+                                                aria-label="Siguiente">&#10095;</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <div id="precios" class="panel">
+            <div id="ubicacion" class="panel">
                 <div class="panel-header">
-                    <h3>Lista de Precios Base</h3>
+                    <h3>Dónde Encontrarnos</h3>
                 </div>
                 <div class="panel-content">
-                    <p class="prices-disclaimer">Nota: Los precios indicados son una estimación base. El valor final
-                        dependerá del repuesto específico y la complejidad de la reparación tras el diagnóstico de la
-                        unidad.</p>
-                    <div class="table-responsive">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Servicio</th>
-                                    <th class="col-price">Precio Estimado (ARS)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="row-alt">
-                                    <td>Diagnóstico de Equipo</td>
-                                    <td class="col-price">Consultar</td>
-                                </tr>
-                                <tr>
-                                    <td>Limpieza Completa + Cambio de Pasta Térmica (PC/Notebook)</td>
-                                    <td class="col-price">Desde $15.000</td>
-                                </tr>
-                                <tr class="row-alt">
-                                    <td>Instalación de Sistema Operativo (Windows) + Drivers</td>
-                                    <td class="col-price">Desde $12.000</td>
-                                </tr>
-                                <tr>
-                                    <td>Instalación de Microsoft Office / Programas Específicos</td>
-                                    <td class="col-price">Desde $8.000</td>
-                                </tr>
-                                <tr class="row-alt">
-                                    <td>Instalación de Juegos (por título o pack)</td>
-                                    <td class="col-price">Desde $5.000</td>
-                                </tr>
-                                <tr>
-                                    <td>Cambio de Módulo de Carga (Celulares)</td>
-                                    <td class="col-price">Desde $10.000</td>
-                                </tr>
-                                <tr class="row-alt">
-                                    <td>Revisión de TV / Pantallas</td>
-                                    <td class="col-price">Consultar</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d884.6161993389591!2d-58.94012303646847!3d-27.517015543518905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDMxJzAxLjAiUyA1OMKwNTYnMjQuMSJX!5e0!3m2!1ses-419!2sar!4v1772462407365!5m2!1ses-419!2sar"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Ubicación de MiMaquina en Google Maps">
+                        </iframe>
                     </div>
+                    <p class="map-note">Visitanos en nuestro local. ¡Te esperamos!</p>
                 </div>
             </div>
         </div>
@@ -161,8 +331,8 @@
             <div id="contacto" class="footer-box">
                 <h4>Información de Contacto</h4>
                 <ul>
-                    <li><strong>Dirección:</strong> Tu Barrio / Ciudad, Provincia</li>
-                    <li><strong>Teléfono / WhatsApp:</strong> <a href="#">(+54) 9 11 1234-5678</a></li>
+                    <li><strong>Dirección:</strong> Hipolito Yrigoyen 120 / Puerto Vilelas, Chaco</li>
+                    <li><strong>Teléfono / WhatsApp:</strong> <a href="#">(+54) 9 362 4868450</a></li>
                     <li><strong>Correo Electrónico:</strong> <a href="#">mimaquinacontacto@gmail.com</a></li>
                 </ul>
             </div>

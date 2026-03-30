@@ -834,12 +834,18 @@ a:hover {
         margin-top: 10px;
         margin-right: 0;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
+        padding: 0 5px;
     }
 
     #nav li {
-        margin: 5px;
+        margin: 2px 1px;
+    }
+
+    #nav a {
+        padding: 5px 8px;
+        font-size: 12px;
     }
 
     .service-header {
